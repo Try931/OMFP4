@@ -1,0 +1,104 @@
+html {
+  max-width: 375px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+header {
+  border: solid 2px red;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.header-title {
+  border: solid 2px green;
+  width: 100%;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-title img {
+  width: 197px;
+  height: 36px;
+}
+
+.place {
+  border: solid 2px orange;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+}
+.place i {
+  color: #353535;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+.place p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.reservation {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.reservation .explore {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border-radius: 25px;
+  border: none;
+  width: 218px;
+  height: 50px;
+}
+
+.choices {
+  width: 100%;
+  height: 440px;
+  padding-left: 20px;
+}
+
+.restaurantes {
+  width: 100%;
+  height: 1226px;
+}
+
+footer {
+  background-color: #353535;
+  width: 100%;
+  height: 186px;
+  padding: 20px;
+}
+footer img {
+  width: 139px;
+  height: 27px;
+}
+footer .footer-list {
+  display: flex;
+  flex-direction: column;
+}
+footer .propose-partenairs {
+  color: white;
+}
+footer .Mentions-contact {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

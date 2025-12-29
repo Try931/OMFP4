@@ -1,8 +1,7 @@
-html {
+.main-container {
   max-width: 375px;
-}
-
-body {
+  width: 100%;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
@@ -22,16 +21,20 @@ h2 {
 }
 
 .header-title {
-  border: solid 2px green;
   width: 100%;
   height: 63px;
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: drop-shadow(0px 5px 1px rgba(7, 7, 7, 0.1));
 }
 .header-title img {
   width: 197px;
   height: 36px;
+}
+.header-title a {
+  display: flex;
+  align-items: center;
 }
 
 .place {
@@ -41,7 +44,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: #EAEAEA;
-  filter: drop-shadow rgb(0, 4, 4);
+  filter: drop-shadow(0px 5px 2.5px rgba(30, 30, 30, 0.1));
 }
 .place i {
   color: #353535;
@@ -72,6 +75,12 @@ h2 {
   border: none;
   width: 218px;
   height: 50px;
+  filter: drop-shadow(0 6px 1px rgba(136, 136, 136, 0.1));
+}
+.reservation-container .explore:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 6px 9px rgba(19, 19, 19, 0.1)) brightness(1.13);
+  transition: filter 0.8s;
 }
 
 .choices {
@@ -86,12 +95,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: #FF79DA solid;
 }
 .choices li {
   width: 335px;
   height: 72px;
-  border: solid 2px red;
   border-radius: 20px;
   font-size: 16px;
   font-weight: 500;
@@ -99,6 +106,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 10px rgba(136, 136, 136, 0.1);
   counter-increment: choice;
 }
 .choices li::before {
@@ -162,24 +171,40 @@ h2 {
   padding-top: 5px;
   padding-left: 15px;
 }
+.restaurantes .enchanted img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 -153px;
+     object-position: 0 -153px;
+}
 
 footer {
   background-color: #353535;
   width: 100%;
   height: 186px;
-  padding: 20px;
 }
 footer img {
   width: 139px;
   height: 27px;
+  padding: 15px 20px;
 }
 footer .footer-list {
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
 }
 footer .propose-partenairs {
   color: white;
+  padding-bottom: 8px;
 }
 footer .Mentions-contact {
+  color: white;
+  padding-bottom: 8px;
+}
+footer .img-column {
+  display: flex;
+}
+footer .img-column i {
+  padding-right: 10px;
   color: white;
 }/*# sourceMappingURL=style.css.map */

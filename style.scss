@@ -1,11 +1,12 @@
 
 
 
-html {
-    max-width: 375px;
-}
 
-body {
+
+.main-container {
+    max-width: 375px;
+    width: 100%;
+    box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     margin: 0;
 }
@@ -25,20 +26,35 @@ h2 {
     text-align: center;
 }
 
-.header-title {
 
-        border: solid 2px green;
+.header-title {
         width: 100%;
         height: 63px;
         display: flex;
         justify-content: center;
         align-items: center;
+        filter: drop-shadow(0px 5px 1px rgba(7, 7, 7, 0.1));
+
     img {
     width: 197px;
-    height: 36px;
-    }
+    height: 36px;}
+
+    a {
+        display: flex;
+        align-items: center;}
+
+    
 
 }
+.pdg {
+        a { 
+            
+
+
+
+        }
+    }
+
 .place {
         width: 100%;
         height: 50px;
@@ -46,7 +62,7 @@ h2 {
         justify-content: center;
         align-items: center;
         background-color: #EAEAEA;
-        filter: drop-shadow rgba(0, 4, 4);
+        filter: drop-shadow(0px 5px 2.5px rgba(30, 30, 30, 0.1));
     i {
         color: #353535;
         width: 20px;
@@ -77,7 +93,17 @@ h2 {
         border: none;
         width: 218px;
         height: 50px;
-}
+        filter: drop-shadow(0 6px 1px rgba(136, 136, 136, 0.1));
+
+    &:hover {
+        cursor: pointer;
+        filter: drop-shadow(0px 6px 9px rgba(19, 19, 19, 0.1)) brightness(1.13);
+        transition: filter 0.8s;
+        } 
+
+            
+} 
+
 }
 .choices {
     width: 100%;
@@ -91,14 +117,11 @@ h2 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: #FF79DA solid;
-
     }
 
     li {
         width: 335px;
         height: 72px;
-        border: solid 2px red;
         border-radius: 20px;
         font-size: 16px;
         font-weight: 500;
@@ -106,6 +129,8 @@ h2 {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px;
+        box-shadow: 0 6px 10px rgba(136, 136, 136, 0.1);
         counter-increment: choice;
         &::before {
         content: counter(choice);
@@ -171,29 +196,56 @@ h2 {
             padding-left: 15px;
         }
     }
+    .enchanted {
+        img {
+            object-fit: cover;
+            object-position: 0 -153px;
+        }
+        }
+}
+.Palette-du-goût {
+
+
+        
+        
+
 }
 
-$footer-list-color: white;
 
+$footer-list-color: white;
 footer {
 background-color: #353535;
 width: 100%;
 height: 186px;
-padding: 20px;
        img {
     width: 139px;
     height: 27px;
+    padding: 15px 20px;
     } 
     .footer-list {
         display: flex;
         flex-direction: column;
+        padding-left: 20px;
+
     }
     .propose-partenairs {
 
         color: $footer-list-color;
+        padding-bottom: 8px;
     }
     .Mentions-contact {
         color: $footer-list-color;
+                padding-bottom: 8px;
+
+    }
+    .img-column {
+        display: flex;
+
+        i { padding-right: 10px;
+            color: $footer-list-color;
+
+
+        }
 
     }
 }

@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
 </head>
-<body class="main-container">
+<body class="main-container" id="main-container">
     <header>
         <div class="header-title">
             <img src="Images et textes Ohmyfood\images\logo\ohmyfood.png" alt="logo-omf">
@@ -30,7 +30,7 @@
                     <h2>Découvrez des restaurants d’exception, sélectionnés par nos soins.</h2>
                 </div>
                 <div class="reservation-items">
-                    <button class="explore">Explorer nos restaurants</button>
+                    <a href="#ristoranti"><button class="explore">Explorer nos restaurants</button></a>
                 </div>
                 
 
@@ -39,20 +39,20 @@
                 <div>
                     <h1>Fonctionnement</h1>
                     <ol>
-                        <li>Choisissez un restaurant</li>
-                        <li>Composez votre menu</li>
-                        <li>Dégustez au restaurant</li>
+                        <li><i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant</li>
+                        <li><i class="fa-solid fa-list-ul"></i>Composez votre menu</li>
+                        <li><i class="fa-solid fa-store"></i>Dégustez au restaurant</li>
                     </ol>
                 </div>
     
             </section>
-            <section class="restaurantes">
+            <section class="restaurantes" id="ristoranti">
                 <div>
                     <h1>Restaurants</h1>
                     <div class="meals-cards">
                        <div class="meal-card"> 
                         <img src="Images et textes Ohmyfood\images\restaurants\jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image-de-plat">    
-                        <a href="">La palette du goût</a>
+                        <a href="#Palette-du-goût">La palette du goût</a>
                         <p>Ménilmontant</p> 
                         </div>
                         <div class="meal-card enchanted"> 
@@ -73,9 +73,9 @@
                     </div>
                 </div>
             </section>
-            <section class="Palette-du-goût">
+            <section class="restaurant-page" id="Palette-du-goût">
                 <div class="header-title pdg">
-                    <a><i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="#main-container"><i class="fa-solid fa-arrow-left"></i></a>
                     <img src="Images et textes Ohmyfood\images\logo\ohmyfood.png" alt="logo-omf">  
                 </div>
 

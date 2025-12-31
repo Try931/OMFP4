@@ -37,6 +37,14 @@ h2 {
   align-items: center;
 }
 
+.pdg a {
+  position: absolute;
+  left: 20px;
+  font-size: 16.5px;
+  text-decoration: none;
+  color: black;
+}
+
 .place {
   width: 100%;
   height: 50px;
@@ -95,6 +103,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.choices i {
+  color: #7E7E7E;
+  padding-right: 40px;
 }
 .choices li {
   width: 335px;
@@ -176,6 +188,25 @@ h2 {
      object-fit: cover;
   -o-object-position: 0 -153px;
      object-position: 0 -153px;
+}
+
+.pdg a {
+  position: absolute;
+  left: 20px;
+  font-size: 16.5px;
+  text-decoration: none;
+  color: black;
+}
+
+.restaurant-page {
+  display: none;
+}
+.restaurant-page:target {
+  display: block;
+}
+
+.restaurant-page:target ~ #main-container {
+  display: none;
 }
 
 footer {

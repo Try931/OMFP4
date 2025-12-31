@@ -47,11 +47,11 @@ h2 {
 
 }
 .pdg {
-        a { 
-            
-
-
-
+        a { position: absolute;
+            left: 20px;
+            font-size: 16.5px;
+            text-decoration: none;
+            color: black;
         }
     }
 
@@ -83,6 +83,7 @@ h2 {
     .reservation-items {
         display: flex;
         justify-content: center;
+
     }
     .explore {
         font-size: 16px;
@@ -118,6 +119,13 @@ h2 {
         align-items: center;
         justify-content: center;
     }
+    i {
+        color: #7E7E7E;
+        padding-right: 40px;
+    }
+
+    
+
 
     li {
         width: 335px;
@@ -203,14 +211,28 @@ h2 {
         }
         }
 }
-.Palette-du-goût {
 
-
-        
-        
-
+.pdg a {
+  position: absolute;
+  left: 20px;
+  font-size: 16.5px;
+  text-decoration: none;
+  color: black;
 }
 
+.restaurant-page {
+
+display: none;
+
+&:target {
+display: block;
+  }
+}
+  
+.restaurant-page:target ~ #main-container {
+display: none;
+
+}
 
 $footer-list-color: white;
 footer {

@@ -26,7 +26,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0px 5px 1px rgba(7, 7, 7, 0.1));
+  box-shadow: 1px 1px rgba(136, 136, 136, 0.1);
 }
 .header-title img {
   width: 197px;
@@ -93,7 +93,6 @@ h2 {
 
 .choices {
   width: 100%;
-  height: 440px;
 }
 .choices h1 {
   padding-left: 20px;
@@ -103,20 +102,16 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.choices i {
-  color: #7E7E7E;
-  padding-right: 40px;
+  padding-left: 20px;
 }
 .choices li {
-  width: 335px;
+  width: 322px;
   height: 72px;
   border-radius: 20px;
   font-size: 16px;
   font-weight: 500;
   background-color: #F6F6F6;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   box-shadow: 0 6px 10px rgba(136, 136, 136, 0.1);
@@ -132,14 +127,21 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: -1px;
-  transform: translateY(-40%);
+  position: relative;
+  right: 10px;
+}
+.choices li i {
+  color: #7E7E7E;
+  right: 40px;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+.choices li .fa-store {
+  color: #9356DC;
 }
 
 .restaurantes {
   width: 100%;
-  height: 1226px;
   background-color: #F6F6F6;
 }
 .restaurantes h1 {
@@ -158,6 +160,9 @@ h2 {
   background-color: white;
   margin-bottom: 17px;
 }
+.restaurantes .meal-card a {
+  text-decoration: none;
+}
 .restaurantes .meal-card img {
   width: 100%;
   height: 174px;
@@ -167,21 +172,41 @@ h2 {
      object-position: bottom;
   margin-bottom: 15px;
 }
-.restaurantes .meal-card a {
+.restaurantes .meal-card .new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  left: 245px;
+  bottom: 248px;
+  padding: 0;
+  width: 80px;
+  height: 29px;
+}
+.restaurantes .meal-card i {
+  position: relative;
+  left: 300px;
+  bottom: 33px;
+  font-size: 22px;
+}
+.restaurantes .meal-card h3 {
   font-size: 18px;
   font-weight: 700;
-  padding-left: 15px;
-  padding-top: 15px;
-  text-decoration: none;
+  padding-left: 10px;
+  padding-top: 0;
   color: black;
-  margin-top: 50px;
+  margin: 0;
 }
 .restaurantes .meal-card p {
   font-size: 17px;
   font-weight: 300;
   margin: 0;
   padding-top: 5px;
-  padding-left: 15px;
+  padding-left: 0px;
 }
 .restaurantes .enchanted img {
   -o-object-fit: cover;
@@ -190,12 +215,13 @@ h2 {
      object-position: 0 -153px;
 }
 
-.pdg a {
-  position: absolute;
-  left: 20px;
-  font-size: 16.5px;
+.pdg i {
+  width: 17px;
+  height: 16px;
   text-decoration: none;
   color: black;
+  position: relative;
+  bottom: 3px;
 }
 
 .restaurant-page {
@@ -207,6 +233,86 @@ h2 {
 
 .restaurant-page:target ~ #main-container {
   display: none;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 300;
+  width: 40px;
+  height: 27px;
+  border-bottom: solid #99E2D0 3px;
+  margin-bottom: 10px;
+}
+
+.Restaurant-1 {
+  background-color: #F6F6F6;
+}
+.Restaurant-1 img {
+  width: 100%;
+  height: 275px;
+  z-index: 0;
+}
+.Restaurant-1 .title-card {
+  background-color: #F6F6F6;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 17px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: -52px;
+}
+.Restaurant-1 .title-card h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+.Restaurant-1 .title-card i {
+  font-size: 22px;
+  position: relative;
+  left: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.Restaurant-1 .title-card i:active {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.Restaurant-1 .full-meal {
+  padding-left: 15px;
+}
+.Restaurant-1 .full-meal .detail {
+  background-color: white;
+  border-radius: 15px;
+  width: 315px;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 6px 10px rgba(20, 20, 20, 0.1);
+  cursor: pointer;
+}
+.Restaurant-1 .full-meal .detail h5 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 5px;
+}
+.Restaurant-1 .full-meal .detail h6 {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+  display: flex;
+}
+.Restaurant-1 .full-meal .detail h6 p {
+  margin: 0;
+  position: relative;
+  left: 130px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 footer {

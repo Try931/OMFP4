@@ -1,5 +1,5 @@
 .main-container {
-  max-width: 375px;
+  max-width: 767.98px;
   width: 100%;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -59,6 +59,8 @@ h2 {
   width: 20px;
   height: 20px;
   font-size: 16px;
+  position: relative;
+  top: 3px;
 }
 .place p {
   font-size: 16px;
@@ -67,14 +69,18 @@ h2 {
 
 .reservation-container {
   width: 100%;
-  height: 400px;
+  height: 300px;
   background-color: #F6F6F6;
 }
-.reservation-container .reservation-items {
+
+.reservation-items {
   display: flex;
   justify-content: center;
+  padding: 0 10px;
+  margin-bottom: 15px;
 }
-.reservation-container .explore {
+
+.explore {
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -85,10 +91,14 @@ h2 {
   height: 50px;
   filter: drop-shadow(0 6px 1px rgba(136, 136, 136, 0.1));
 }
-.reservation-container .explore:hover {
+.explore:hover {
   cursor: pointer;
   filter: drop-shadow(0px 6px 9px rgba(19, 19, 19, 0.1)) brightness(1.13);
   transition: filter 0.8s;
+}
+
+.order {
+  margin-top: 20px;
 }
 
 .choices {
@@ -172,6 +182,12 @@ h2 {
      object-position: bottom;
   margin-bottom: 15px;
 }
+.restaurantes .meal-card span img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 -155px;
+     object-position: 0 -155px;
+}
 .restaurantes .meal-card .new {
   display: flex;
   align-items: center;
@@ -187,13 +203,28 @@ h2 {
   width: 80px;
   height: 29px;
 }
-.restaurantes .meal-card i {
+.restaurantes .meal-card input {
+  position: relative;
+  left: 60px;
+  display: none;
+}
+.restaurantes .meal-card label i {
+  font-size: 22px;
+  color: black;
   position: relative;
   left: 300px;
-  bottom: 33px;
-  font-size: 22px;
+  bottom: 30px;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.restaurantes .meal-card h3 {
+.restaurantes .meal-card input:checked + label i {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
   font-size: 18px;
   font-weight: 700;
   padding-left: 10px;
@@ -201,18 +232,13 @@ h2 {
   color: black;
   margin: 0;
 }
-.restaurantes .meal-card p {
+
+p {
   font-size: 17px;
   font-weight: 300;
   margin: 0;
   padding-top: 5px;
   padding-left: 0px;
-}
-.restaurantes .enchanted img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 -153px;
-     object-position: 0 -153px;
 }
 
 .pdg i {
@@ -230,8 +256,7 @@ h2 {
 .restaurant-page:target {
   display: block;
 }
-
-.restaurant-page:target ~ #main-container {
+.restaurant-page:target:target ~ .main-page {
   display: none;
 }
 
@@ -259,60 +284,107 @@ h4 {
   display: flex;
   align-items: center;
   padding-left: 17px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-top: -52px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: -60px;
 }
 .Restaurant-1 .title-card h3 {
   font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-weight: 400;
+  margin-top: 32px;
 }
-.Restaurant-1 .title-card i {
-  font-size: 22px;
+.Restaurant-1 .title-card input {
   position: relative;
-  left: 40px;
-  cursor: pointer;
-  border-radius: 50%;
+  left: 60px;
+  display: none;
 }
-.Restaurant-1 .title-card i:active {
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  background-clip: text;
+.Restaurant-1 i {
+  font-size: 22px;
+  color: black;
+  position: relative;
+  left: 2.9rem;
+  top: 1rem;
+  cursor: pointer;
+  background: black;
   -webkit-background-clip: text;
-  color: transparent;
   -webkit-text-fill-color: transparent;
 }
-.Restaurant-1 .full-meal {
-  padding-left: 15px;
+.Restaurant-1 input:checked + label i {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.Restaurant-1 .full-meal .detail {
+
+.full-meal {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.full-meal .next {
+  padding-left: 0;
+}
+.full-meal .menu-detail {
+  display: flex;
   background-color: white;
+  margin-bottom: 15px;
   border-radius: 15px;
   width: 315px;
+  height: 69px;
   padding-left: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   box-shadow: 0 6px 10px rgba(20, 20, 20, 0.1);
   cursor: pointer;
+  position: relative;
 }
-.Restaurant-1 .full-meal .detail h5 {
+.full-meal .menu-detail input:checked + .menu-description span {
+  transform: translateX(-59px);
+}
+.full-meal .menu-detail input:checked ~ .check-icon {
+  clip-path: inset(0 0 0 0);
+  right: 0;
+}
+.full-meal .menu-description span {
+  transition: all 0.3s linear;
+}
+.full-meal h5 {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.Restaurant-1 .full-meal .detail h6 {
+.full-meal h6 {
   font-size: 15px;
   font-weight: 300;
   margin: 0;
   display: flex;
 }
-.Restaurant-1 .full-meal .detail h6 p {
+.full-meal p {
   margin: 0;
   position: relative;
   left: 130px;
   font-size: 15px;
   font-weight: 700;
+}
+.full-meal .check-icon {
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  right: -60px;
+  clip-path: inset(0 100% 0 0);
+  transition: all 0.3s linear;
+}
+.full-meal .check-icon i {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 69px;
+  background-color: white;
 }
 
 footer {

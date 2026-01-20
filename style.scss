@@ -244,17 +244,28 @@ h2 {
   position: relative;
   bottom: 3px; 
 }
-.restaurant-page {
-display: none;
-&:target {
-display: block;
-&:target ~ .main-page {
-display: none;
-}
-}
-}
 
-h4 {font-size: 16px;
+.main-page {
+  display: block;
+  &:target {
+  display: block;
+}
+}
+.restaurant-page {
+    display: none;
+    &:target {
+        display: block;
+    }
+    &:target ~ .main-page {
+        display: none;
+    }
+    }
+
+
+h4 {position: relative;
+    left: 15px;
+    display: flex;
+    font-size: 16px;
     font-weight: 300;
     width: 40px;
     height: 27px;
@@ -267,6 +278,7 @@ h4 {font-size: 16px;
     width: 100%;
     height: 275px;
     z-index: 0;
+    object-fit: cover;
     }
     .title-card {
         background-color: #F6F6F6;
@@ -308,29 +320,29 @@ h4 {font-size: 16px;
             }
             }
     .full-meal {
-        padding-left: 15px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         .next {padding-left: 0;}
         .menu-detail{
             display: flex;
             background-color: white;
             margin-bottom: 15px;
             border-radius: 15px;
-            width: 315px;
+            width: 349px;
             height: 69px;
             padding-left: 15px;
             box-shadow: 0 6px 10px rgba(20, 20, 20, 0.1);
             cursor: pointer; 
             position: relative;        
-            input:checked + .menu-description span {
+            input:checked + .menu-description p {
                 transform: translateX(-59px);
                 }
             input:checked ~ .check-icon {
             clip-path: inset(0 0 0 0);
             right: 0; 
             }}
-        .menu-description span {
+        .menu-description p {
         transition: all 0.3s linear;
         }
 
@@ -348,11 +360,11 @@ h4 {font-size: 16px;
             display: flex;}
             p {
                 margin: 0;
-                position: relative;
-                left: 130px;
                 font-size: 15px;
                 font-weight: 700;
-            }
+                position: absolute;
+                bottom: 7px;
+                left: 330px;            }
     .check-icon {
         background-color: #99E2D0;
         border-top-right-radius: 15px;
@@ -403,4 +415,33 @@ height: 186px;
             color: $footer-list-color;
         }
     }
+}
+
+/* Media query*/
+
+@media (min-width: 767.98px) 
+{
+    .main-container {
+        max-width: 1200px;
+    margin: 0 auto;
+
+    }
+.choices {
+    width: 100%;
+    h1 {
+            padding-left: 20px;
+    }
+    ol {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 20px;
+
+}
+    li {
+        
+
+    }
+}
 }

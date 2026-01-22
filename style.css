@@ -214,14 +214,10 @@ h2 {
   position: relative;
   left: 300px;
   bottom: 30px;
-  background: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: white;
 }
 .restaurantes .meal-card input:checked + label i {
   background: linear-gradient(to top, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 h3 {
